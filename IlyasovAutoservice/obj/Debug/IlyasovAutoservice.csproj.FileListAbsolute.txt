@@ -1,0 +1,42 @@
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\bin\Debug\IlyasovAutoservice.exe.config
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\bin\Debug\IlyasovAutoservice.exe
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\bin\Debug\IlyasovAutoservice.pdb
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.csproj.AssemblyReference.cache
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.csproj.SuggestedBindingRedirects.cache
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\AddEditPage.g.cs
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\MainWindow.g.cs
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\ServicePage.g.cs
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\App.g.cs
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\IlyasovAutoservice_MarkupCompile.cache
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\IlyasovAutoservice_MarkupCompile.lref
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\AddEditPage.baml
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\MainWindow.baml
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\ServicePage.baml
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.g.resources
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.Properties.Resources.resources
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.csproj.GenerateResource.cache
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.csproj.CoreCompileInputs.cache
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.exe
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.pdb
+D:\По учебе\3 курс уже, капец\Модули\3 лаба\IlyasovAutoservice\IlyasovAutoservice\obj\Debug\App.baml
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\bin\Debug\IlyasovAutoservice.exe.config
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\bin\Debug\IlyasovAutoservice.exe
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\bin\Debug\IlyasovAutoservice.pdb
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.csproj.AssemblyReference.cache
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.csproj.SuggestedBindingRedirects.cache
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\AddEditPage.g.cs
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\MainWindow.g.cs
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\ServicePage.g.cs
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\App.g.cs
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\IlyasovAutoservice_MarkupCompile.cache
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\IlyasovAutoservice_MarkupCompile.lref
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\App.baml
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\AddEditPage.baml
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\MainWindow.baml
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\ServicePage.baml
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.g.resources
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.Properties.Resources.resources
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.csproj.GenerateResource.cache
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.csproj.CoreCompileInputs.cache
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.exe
+D:\По учебе\3 курс уже, капец\Модули\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.pdb
