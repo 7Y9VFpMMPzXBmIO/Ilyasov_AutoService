@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-D:\3 курс\ИСП 3221\Ильясов\автосервис\Ilyasov_AutoService\IlyasovAutoservice\obj\Debug\
+D:\3 курс\ИСП 3221\Ильясов\автосервис\Ilyasov_AutoService\IlyasovAutoservice\obj\Release\
 IlyasovAutoservice
 none
 false
-DEBUG;TRACE
+TRACE
 D:\3 курс\ИСП 3221\Ильясов\автосервис\Ilyasov_AutoService\IlyasovAutoservice\App.xaml
 31483729377
 
-9-1079045800
+8-236686433
 141183416626
 AddEditPage.xaml;MainWindow.xaml;ServicePage.xaml;
 
