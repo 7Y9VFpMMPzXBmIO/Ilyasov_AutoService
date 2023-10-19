@@ -23,6 +23,8 @@ namespace IlyasovAutoservice
         public ServicePage()
         {
             InitializeComponent();
+            var currentServices = Ильясов_АвтосервисEntities.GetContext().Service.ToList();
+            ServiceListView.ItemsSource = currentServices;
 
         }
 
