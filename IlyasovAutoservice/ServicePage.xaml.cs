@@ -76,10 +76,7 @@ namespace IlyasovAutoservice
             ServiceListView.ItemsSource = currentServices;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Manager.MainFrame.Navigate(new AddEditPage());
-        }
+        
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
@@ -104,6 +101,26 @@ namespace IlyasovAutoservice
         private void TBoxSearh_TextChanged(object sender, TextChangedEventArgs e)
         {
             UpdateServices();
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddEditPage(null));
+        }
+ 
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if(Visibility == Visibility.Visible)
+            {
+                Ильясов_АвтосервисEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                ServiceListView.ItemsSource = Ильясов_АвтосервисEntities.GetContext().Service.ToList();
+            }
+        }
+
+        private void EditButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Service));
         }
     }
 }
