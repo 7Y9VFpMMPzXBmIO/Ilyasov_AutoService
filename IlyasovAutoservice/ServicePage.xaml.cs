@@ -18,8 +18,15 @@ namespace IlyasovAutoservice
     /// <summary>
     /// Логика взаимодействия для ServicePage.xaml
     /// </summary>
+   
+
     public partial class ServicePage : Page
     {
+        int CountRecords;
+        int CountPage;
+        int CurrentPage = 0;
+        List<Service> CurrentPageList = new List<Service>();
+        List<Service> TableList;
         public ServicePage()
         {
             InitializeComponent();
@@ -121,6 +128,35 @@ namespace IlyasovAutoservice
         private void EditButton_Click_1(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Service));
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            var currentService = (sender as Button).DataContext as Service;
+
+            var currentClientServices = Ильясов_АвтосервисEntities.GetContext().ClientService.ToList();
+            currentClientServices = currentClientServices.Where(p => p.ServiceID == currentService.ID).ToList();
+            if (currentClientServices.Count != 0)
+                MessageBox.Show("Невозможно выполнить удаление, так как существует записи на эту услугу ");
+            if (MessageBox.Show("Вы точно хотите выполнить удаление?", "Внимание!" , MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    Ильясов_АвтосервисEntities.GetContext().Service.Remove(currentService);
+                    Ильясов_АвтосервисEntities.GetContext().SaveChanges();
+                    ServiceListView.ItemsSource = Ильясов_АвтосервисEntities.GetContext().Service.ToList();
+                    UpdateServices();
+                }
+                 catch(Exception ex)
+                    {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+
+        private void LeftDirButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

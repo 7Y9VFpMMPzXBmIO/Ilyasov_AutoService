@@ -13,13 +13,19 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <StackPanel Margin="10" Orientation="Horizontal">
                 <TextBlock Text="Введите название для поиска " TextAlignment="Right" Width="300" FontSize="20"></TextBlock>
                 <TextBox Name="TBoxSearh" TextChanged="TBoxSearh_TextChanged" Width="300" FontSize="15"></TextBox>
             </StackPanel>
-            
+            <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Name="LeftDirButton" Content="&lt" Width="20" Height="20" Click="LeftDirButton_Click"></Button>
+                <ListBox FontSize="20" Name="PageListBox">
+                    
+                </ListBox>
+            </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10">
                 <TextBlock Text=" Выберите скидку для поиска " TextAlignment="Right" Width="300" FontSize="20"></TextBlock>
                 <ComboBox Name="ComboType" SelectionChanged="ComboType_SelectionChanged" FontSize="15" Width="200">
@@ -47,12 +53,12 @@
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Image Width="100" Grid.Column="0" Stretch="UniformToFill" HorizontalAlignment="Center">
+                        <Image Width="200" Grid.RowSpan="4" Grid.Column="0" Stretch="UniformToFill" HorizontalAlignment="Center">
                             <Image.Source>
                                 <Binding Path="MainImagePath">
                                     <Binding.TargetNullValue>
                                         <ImageSource>
-                                            Images/service_logo.png
+                                            Resources/picture.png
                                         </ImageSource>
                                     </Binding.TargetNullValue>
                                 </Binding>
@@ -64,7 +70,7 @@
                         <TextBlock Text="{Binding Discount, StringFormat=*скидка {0} % }" Opacity="{Binding Discount}" Margin="5" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="16"></TextBlock>
                         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
                             <Button Name="EditButton" Content="редактировать" Margin="2" Click="EditButton_Click_1"></Button>
-                            <Button Name="DeleteButton" Content="удалить" Margin="2"></Button>
+                            <Button Name="DeleteButton" Content="удалить" Margin="2" Click="DeleteButton_Click"></Button>
                         </StackPanel>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50"/>

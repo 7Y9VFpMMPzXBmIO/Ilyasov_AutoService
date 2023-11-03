@@ -198,6 +198,24 @@
       <DependentUpon>IlyasovModel.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\picture.png" />
+    <Resource Include="Resources\diz.jpg" />
+    <Resource Include="Resources\rulevoe-upravlenie-avtomobilya.jpg" />
+    <Resource Include="Resources\transmission.jpg" />
+    <Resource Include="Resources\АКПП.jpg" />
+    <Resource Include="Resources\Вариатор.jpg" />
+    <Resource Include="Resources\Выхлопная система.jpg" />
+    <Resource Include="Resources\ГУР.png" />
+    <Resource Include="Resources\Двигатель.png" />
+    <Resource Include="Resources\Дополнительные услуги.png" />
+    <Resource Include="Resources\Кондиционер.jpg" />
+    <Resource Include="Resources\КПП.png" />
+    <Resource Include="Resources\Подвеска.png" />
+    <Resource Include="Resources\Сцепление.jpg" />
+    <Resource Include="Resources\Техническое обслуживание.png" />
+    <Resource Include="Resources\Топливная система.png" />
+    <Resource Include="Resources\Шиномонтаж.jpg" />
+    <Resource Include="Resources\Электрика.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

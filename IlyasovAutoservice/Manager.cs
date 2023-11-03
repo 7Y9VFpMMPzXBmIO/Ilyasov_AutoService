@@ -9,6 +9,7 @@ namespace IlyasovAutoservice
 {
     internal class Manager
     {
-        public static Frame MainFrame { get; set; } 
+        public static Frame MainFrame { get; set; }
+
     }
 }
