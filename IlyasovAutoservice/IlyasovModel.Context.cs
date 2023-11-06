@@ -16,6 +16,7 @@ namespace IlyasovAutoservice
     public partial class Ильясов_АвтосервисEntities : DbContext
     {
         private static Ильясов_АвтосервисEntities _context;
+
         public static Ильясов_АвтосервисEntities GetContext()
         {
             if (_context == null)

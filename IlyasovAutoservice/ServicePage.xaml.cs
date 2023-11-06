@@ -40,13 +40,98 @@ namespace IlyasovAutoservice
            
             UpdateServices();
         }
-       
+
+        private void ChangePage(int direction, int? selectedPage)
+        {
+            CurrentPageList.Clear();
+            CountRecords = TableList.Count;
+
+            if (CountRecords % 10 > 0)
+            {
+                CountPage = CountRecords / 10 + 1;
+            }
+            else
+            {
+                CountPage = CountRecords / 10;
+            }
+
+            Boolean Ifupdate = true;
+
+            int min;
+
+            if (selectedPage.HasValue)
+            {
+                if (selectedPage >= 0 && selectedPage <= CountPage)
+                {
+                    CurrentPage = (int)selectedPage;
+                    min = CurrentPage * 10 + 10 < CountRecords ? CurrentPage * 10 + 10 : CountRecords;
+                    for (int i = CurrentPage * 10; i < min; i++)
+                    {
+                        CurrentPageList.Add(TableList[i]);
+                    }
+                }
+            }
+            else
+            {
+                switch (direction)
+                {
+                    case 1:
+                        if (CurrentPage > 0)
+                        {
+                            CurrentPage--;
+                            min = CurrentPage * 10 + 10 < CountRecords ? CurrentPage * 10 + 10 : CountRecords;
+                            for (int i = CurrentPage * 10; i < min; i++)
+                            {
+                                CurrentPageList.Add(TableList[i]);
+                            }
+                        }
+                        else
+                        {
+                            Ifupdate = false;
+                        }
+                        break;
+                    case 2:
+                        if (CurrentPage < CountPage - 1)
+                        {
+                            CurrentPage++;
+                            min = CurrentPage * 10 + 10 < CountRecords ? CurrentPage * 10 + 10 : CountRecords;
+                            for (int i = CurrentPage * 10; i < min; i++)
+                            {
+                                CurrentPageList.Add(TableList[i]);
+                            }
+                        }
+                        else
+                        {
+                            Ifupdate = false;
+                        }
+                        break;
+                }
+            }
+            if (Ifupdate)
+            {
+                PageListBox.Items.Clear();
+                for (int i = 1; i <= CountPage; i++)
+                {
+                    PageListBox.Items.Add(i);
+                }
+                PageListBox.SelectedIndex = CurrentPage;
+
+                min = CurrentPage * 10 + 10 < CountRecords ? CurrentPage * 10 + 10 : CountRecords;
+                TBCount.Text = min.ToString();
+                TBAllRecords.Text = " из " + CountRecords.ToString();
+
+                ServiceListView.ItemsSource = CurrentPageList;
+
+                ServiceListView.Items.Refresh();
+            }
+
+        }
 
 
-
-        private void UpdateServices()
+            private void UpdateServices()
         {
             var currentServices = Ильясов_АвтосервисEntities.GetContext().Service.ToList();
+    
             if (ComboType.SelectedIndex == 0)
             {
                 currentServices = currentServices.Where(p => (p.Discount >= 0 && p.Discount <= 100)).ToList();
@@ -80,11 +165,13 @@ namespace IlyasovAutoservice
             {
                 currentServices = currentServices.OrderBy(p => p.Cost).ToList();
             }
+         
             ServiceListView.ItemsSource = currentServices;
+            TableList = currentServices;
+            ChangePage(0,0);
+
         }
-
-        
-
+    
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
 
@@ -122,6 +209,7 @@ namespace IlyasovAutoservice
             {
                 Ильясов_АвтосервисEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
                 ServiceListView.ItemsSource = Ильясов_АвтосервисEntities.GetContext().Service.ToList();
+                UpdateServices();
             }
         }
 
@@ -138,25 +226,39 @@ namespace IlyasovAutoservice
             currentClientServices = currentClientServices.Where(p => p.ServiceID == currentService.ID).ToList();
             if (currentClientServices.Count != 0)
                 MessageBox.Show("Невозможно выполнить удаление, так как существует записи на эту услугу ");
-            if (MessageBox.Show("Вы точно хотите выполнить удаление?", "Внимание!" , MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            else
             {
-                try
+                if (MessageBox.Show("Вы точно хотите выполнить удаление?", "Внимание!", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
-                    Ильясов_АвтосервисEntities.GetContext().Service.Remove(currentService);
-                    Ильясов_АвтосервисEntities.GetContext().SaveChanges();
-                    ServiceListView.ItemsSource = Ильясов_АвтосервисEntities.GetContext().Service.ToList();
-                    UpdateServices();
-                }
-                 catch(Exception ex)
+                    try
                     {
-                    MessageBox.Show(ex.Message.ToString());
+                        Ильясов_АвтосервисEntities.GetContext().Service.Remove(currentService);
+                        Ильясов_АвтосервисEntities.GetContext().SaveChanges();
+                        ServiceListView.ItemsSource = Ильясов_АвтосервисEntities.GetContext().Service.ToList();
+                        UpdateServices();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }
                 }
             }
         }
 
+
+        private void PageListBox_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            ChangePage(0, Convert.ToInt32(PageListBox.SelectedItem.ToString()) - 1);
+        }
         private void LeftDirButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ChangePage(1, null);
         }
+
+        private void RightDirButton_Click(object sender, RoutedEventArgs e)
+        {
+            ChangePage(2, null);
+        }
+    
     }
 }

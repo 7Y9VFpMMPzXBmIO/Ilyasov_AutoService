@@ -15,17 +15,25 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock Name="TBCount" FontSize="20" Height="20"></TextBlock>
+            <TextBlock Name="TBAllRecords" FontSize="20" Height="20"></TextBlock>
+            <Button Name="LeftDirButton" Content="&lt;" Width="20" Height="20" Click="LeftDirButton_Click"></Button>
+            <ListBox FontSize="20" Name="PageListBox" MouseUp="PageListBox_MouseUp">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+            <Button Name="RightDirButton" Content="&gt;" Width="20" Height="20" Click="RightDirButton_Click"></Button>
+        </StackPanel>
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <StackPanel Margin="10" Orientation="Horizontal">
+            <StackPanel Margin="10" Orientation="Horizontal" >
                 <TextBlock Text="Введите название для поиска " TextAlignment="Right" Width="300" FontSize="20"></TextBlock>
                 <TextBox Name="TBoxSearh" TextChanged="TBoxSearh_TextChanged" Width="300" FontSize="15"></TextBox>
             </StackPanel>
-            <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Name="LeftDirButton" Content="&lt" Width="20" Height="20" Click="LeftDirButton_Click"></Button>
-                <ListBox FontSize="20" Name="PageListBox">
-                    
-                </ListBox>
-            </StackPanel>
+           
             <StackPanel Orientation="Horizontal" Margin="10">
                 <TextBlock Text=" Выберите скидку для поиска " TextAlignment="Right" Width="300" FontSize="20"></TextBlock>
                 <ComboBox Name="ComboType" SelectionChanged="ComboType_SelectionChanged" FontSize="15" Width="200">
@@ -58,7 +66,7 @@
                                 <Binding Path="MainImagePath">
                                     <Binding.TargetNullValue>
                                         <ImageSource>
-                                            Resources/picture.png
+                                            Услуги автосервиса/picture.png
                                         </ImageSource>
                                     </Binding.TargetNullValue>
                                 </Binding>

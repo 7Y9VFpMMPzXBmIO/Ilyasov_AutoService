@@ -23,7 +23,7 @@ namespace IlyasovAutoservice
     
         public int ID { get; set; }
         public string Title { get; set; }
-        public byte[] MainImagePath { get; set; }
+        public string MainImagePath { get; set; }
         public string DurationInSeconds { get; set; }
         public decimal Cost { get; set; }
         public Nullable<double> Discount { get; set; }
