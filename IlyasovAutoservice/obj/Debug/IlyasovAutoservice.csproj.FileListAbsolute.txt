@@ -94,3 +94,5 @@ D:\3 курс\ИСП 3221\Ильясов\Автосервис\IlyasovAutoservice
 D:\3 курс\ИСП 3221\Ильясов\Автосервис\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.csproj.CopyComplete
 D:\3 курс\ИСП 3221\Ильясов\Автосервис\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.exe
 D:\3 курс\ИСП 3221\Ильясов\Автосервис\IlyasovAutoservice\obj\Debug\IlyasovAutoservice.pdb
+D:\3 курс\ИСП 3221\Ильясов\Автосервис\IlyasovAutoservice\obj\Debug\SignUpPage.g.cs
+D:\3 курс\ИСП 3221\Ильясов\Автосервис\IlyasovAutoservice\obj\Debug\SignUpPage.baml

@@ -12,18 +12,29 @@ namespace IlyasovAutoservice
     using System;
     using System.Collections.Generic;
     
-    public partial class Gender
+    public partial class client_a_import
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Gender()
+        public client_a_import()
         {
-            this.client_a_import = new HashSet<client_a_import>();
+            this.ClientService = new HashSet<ClientService>();
+            this.Tag = new HashSet<Tag>();
         }
     
-        public string Code { get; set; }
-        public string Name { get; set; }
+        public int ID { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public string Patronymic { get; set; }
+        public string GenderCode { get; set; }
+        public string Phone { get; set; }
+        public Nullable<System.DateTime> Birthday { get; set; }
+        public string Email { get; set; }
+        public System.DateTime RegistrationDate { get; set; }
     
+        public virtual Gender Gender { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<client_a_import> client_a_import { get; set; }
+        public virtual ICollection<ClientService> ClientService { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tag> Tag { get; set; }
     }
 }

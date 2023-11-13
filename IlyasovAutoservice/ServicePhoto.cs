@@ -19,5 +19,6 @@ namespace IlyasovAutoservice
         public string PhotoPath { get; set; }
     
         public virtual Service Service { get; set; }
+        public virtual service_a_import service_a_import { get; set; }
     }
 }

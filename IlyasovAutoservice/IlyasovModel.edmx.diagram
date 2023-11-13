@@ -4,27 +4,30 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="97ff021a703d47719962ceb5127ae050" Name="Diagram1">
-        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.Client" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.ClientService" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.DocumentByService" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.Gender" Width="1.5" PointX="1.5" PointY="13.25" IsExpanded="true" />
+      <Diagram DiagramId="b9cc11293ac946d2b11104fa2617ac19" Name="Diagram1">
+        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.client_a_import" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.ClientService" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.DocumentByService" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.Gender" Width="1.5" PointX="1.5" PointY="15.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Ильясов_АвтосервисModel.Manufacturer" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="Ильясов_АвтосервисModel.Product" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Ильясов_АвтосервисModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="Ильясов_АвтосервисModel.ProductSale" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.Service" Width="1.5" PointX="0.75" PointY="16.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.ServicePhoto" Width="1.5" PointX="3" PointY="18.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.Tag" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
-        <AssociationConnector Association="Ильясов_АвтосервисModel.FK_Client_Gender1" ManuallyRouted="false" />
-        <AssociationConnector Association="Ильясов_АвтосервисModel.FK_ClientService_Client" ManuallyRouted="false" />
-        <AssociationConnector Association="Ильясов_АвтосервисModel.FK_ClientService_Service1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.Service" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.service_a_import" Width="1.5" PointX="0.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.ServicePhoto" Width="1.5" PointX="4" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Ильясов_АвтосервисModel.Tag" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="Ильясов_АвтосервисModel.FK_client_a_import_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="Ильясов_АвтосервисModel.FK_ClientService_client_a_import" ManuallyRouted="false" />
+        <AssociationConnector Association="Ильясов_АвтосервисModel.FK_ClientService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="Ильясов_АвтосервисModel.FK_ClientService_service_a_import" ManuallyRouted="false" />
         <AssociationConnector Association="Ильясов_АвтосервисModel.FK_DocumentByService_ClientService" ManuallyRouted="false" />
         <AssociationConnector Association="Ильясов_АвтосервисModel.FK_ProductSale_ClientService" ManuallyRouted="false" />
         <AssociationConnector Association="Ильясов_АвтосервисModel.FK_Product_Manufacturer" ManuallyRouted="false" />
         <AssociationConnector Association="Ильясов_АвтосервисModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
         <AssociationConnector Association="Ильясов_АвтосервисModel.FK_ProductSale_Product" ManuallyRouted="false" />
-        <AssociationConnector Association="Ильясов_АвтосервисModel.FK_ServicePhoto_Service1" ManuallyRouted="false" />
+        <AssociationConnector Association="Ильясов_АвтосервисModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="Ильясов_АвтосервисModel.FK_ServicePhoto_service_a_import" ManuallyRouted="false" />
         <AssociationConnector Association="Ильясов_АвтосервисModel.AttachedProduct" ManuallyRouted="false" />
         <AssociationConnector Association="Ильясов_АвтосервисModel.TagOfClient" ManuallyRouted="false" />
       </Diagram>

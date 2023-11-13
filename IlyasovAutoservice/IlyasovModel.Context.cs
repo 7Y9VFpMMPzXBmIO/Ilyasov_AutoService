@@ -16,7 +16,6 @@ namespace IlyasovAutoservice
     public partial class Ильясов_АвтосервисEntities : DbContext
     {
         private static Ильясов_АвтосервисEntities _context;
-
         public static Ильясов_АвтосервисEntities GetContext()
         {
             if (_context == null)
@@ -33,7 +32,7 @@ namespace IlyasovAutoservice
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<client_a_import> client_a_import { get; set; }
         public virtual DbSet<ClientService> ClientService { get; set; }
         public virtual DbSet<DocumentByService> DocumentByService { get; set; }
         public virtual DbSet<Gender> Gender { get; set; }
@@ -42,6 +41,7 @@ namespace IlyasovAutoservice
         public virtual DbSet<ProductPhoto> ProductPhoto { get; set; }
         public virtual DbSet<ProductSale> ProductSale { get; set; }
         public virtual DbSet<Service> Service { get; set; }
+        public virtual DbSet<service_a_import> service_a_import { get; set; }
         public virtual DbSet<ServicePhoto> ServicePhoto { get; set; }
         public virtual DbSet<Tag> Tag { get; set; }
     }

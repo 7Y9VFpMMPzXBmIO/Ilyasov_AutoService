@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="Хранилище Ильясов_АвтосервисModelContainer" CdmEntityContainer="Ильясов_АвтосервисEntities">
-    <EntitySetMapping Name="Client">
-      <EntityTypeMapping TypeName="Ильясов_АвтосервисModel.Client">
-        <MappingFragment StoreEntitySet="Client">
+    <EntitySetMapping Name="client_a_import">
+      <EntityTypeMapping TypeName="Ильясов_АвтосервисModel.client_a_import">
+        <MappingFragment StoreEntitySet="client_a_import">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -98,6 +98,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="service_a_import">
+      <EntityTypeMapping TypeName="Ильясов_АвтосервисModel.service_a_import">
+        <MappingFragment StoreEntitySet="service_a_import">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="MainImagePath" ColumnName="MainImagePath" />
+          <ScalarProperty Name="DurationInSeconds" ColumnName="DurationInSeconds" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="ServicePhoto">
       <EntityTypeMapping TypeName="Ильясов_АвтосервисModel.ServicePhoto">
         <MappingFragment StoreEntitySet="ServicePhoto">
@@ -125,7 +137,7 @@
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="TagOfClient" TypeName="Ильясов_АвтосервисModel.TagOfClient" StoreEntitySet="TagOfClient">
-      <EndProperty Name="Client">
+      <EndProperty Name="client_a_import">
         <ScalarProperty Name="ID" ColumnName="ClientID" />
       </EndProperty>
       <EndProperty Name="Tag">

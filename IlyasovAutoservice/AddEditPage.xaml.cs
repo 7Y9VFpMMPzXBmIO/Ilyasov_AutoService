@@ -21,12 +21,16 @@ namespace IlyasovAutoservice
     public partial class AddEditPage : Page
     {
         private Service _currentService = new Service();
+
+        public bool check = false;
         public AddEditPage(Service SelectedService)
         {
             InitializeComponent();
             if (SelectedService != null)
+            {
+                check = true;
                 _currentService = SelectedService;
-
+            }
             DataContext = _currentService;
         }
 
@@ -35,41 +39,59 @@ namespace IlyasovAutoservice
             StringBuilder errors = new StringBuilder();
 
             if (string.IsNullOrWhiteSpace(_currentService.Title))
-            {
                 errors.AppendLine("Укажите название услуги");
-            }
-            if (_currentService.Cost == 0)
-            {
-                errors.AppendLine("Укажите стоимость услуги");
-            }
 
-            if (_currentService.Discount==null)
+            if (_currentService.Cost == 0)
+                errors.AppendLine("Укажите стоимость услуги");
+
+            if (_currentService.Discount < 0 || _currentService.Discount > 100)
+                errors.AppendLine("Укажите скидку");
+
+            if (Convert.ToInt32(_currentService.DurationInSeconds) == 0 || string.IsNullOrWhiteSpace(_currentService.DurationInSeconds.ToString()))
             {
-                errors.AppendLine("Укажите скидку услуги");
-            }
-            if (string.IsNullOrWhiteSpace(_currentService.DurationInSeconds))
-            {
+
                 errors.AppendLine("Укажите длительность услуги");
             }
-            if(errors.Length > 0)
+            else
+            {
+                if (Convert.ToInt32(_currentService.DurationInSeconds) > 240 || Convert.ToInt32(_currentService.DurationInSeconds) < 1)
+                    errors.AppendLine("Длительность не может быть больше 240 минут и меньше 1");
+            }
+
+            if (string.IsNullOrWhiteSpace(_currentService.Discount.ToString()))
+            {
+                _currentService.Discount = 0;
+            }
+            if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
                 return;
             }
-            if(_currentService.ID==0)
+
+            var allServices =  Ильясов_АвтосервисEntities.GetContext().Service.ToList();
+            allServices = allServices.Where(p => p.Title == _currentService.Title).ToList();
+
+            if (allServices.Count == 0 || check == true)
             {
-                Ильясов_АвтосервисEntities.GetContext().Service.Add(_currentService);
+                if (_currentService.ID == 0)
+                {
+                     Ильясов_АвтосервисEntities.GetContext().Service.Add(_currentService);
+                }
+                try
+                {
+                     Ильясов_АвтосервисEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Информация сохранена");
+                    Manager.MainFrame.GoBack();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+
+
             }
-            try
-            {
-                Ильясов_АвтосервисEntities.GetContext().SaveChanges();
-                MessageBox.Show("Информация сохранена");
-                Manager.MainFrame.GoBack();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
+            else
+                MessageBox.Show("Уже существует такая услуга");
         }
     }
 }
