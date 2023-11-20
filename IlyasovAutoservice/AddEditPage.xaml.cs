@@ -62,6 +62,7 @@ namespace IlyasovAutoservice
             {
                 _currentService.Discount = 0;
             }
+
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());

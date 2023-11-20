@@ -27,8 +27,10 @@ namespace IlyasovAutoservice
         int CurrentPage = 0;
         List<Service> CurrentPageList = new List<Service>();
         List<Service> TableList;
+
         public ServicePage()
         {
+            
             InitializeComponent();
             var currentServices = Ильясов_АвтосервисEntities.GetContext().Service.ToList();
             ServiceListView.ItemsSource = currentServices;

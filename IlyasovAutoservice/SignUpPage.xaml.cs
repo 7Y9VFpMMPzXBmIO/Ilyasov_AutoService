@@ -45,7 +45,8 @@ namespace IlyasovAutoservice
 
             if (TBStart.Text == "")
                 errors.AppendLine("Укажите время начала услуги");
-
+            if(TBEnd.Text == "")
+                errors.AppendLine("Вы не поставили двоеточие");
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
@@ -57,11 +58,11 @@ namespace IlyasovAutoservice
             _currentClientService.StartTime = Convert.ToDateTime(StartDate.Text + " " + TBStart.Text);
 
             if (_currentClientService.ID == 0)
-                 Ильясов_АвтосервисEntities.GetContext().ClientService.Add(_currentClientService);
+                Ильясов_АвтосервисEntities.GetContext().ClientService.Add(_currentClientService);
 
             try
             {
-                 Ильясов_АвтосервисEntities.GetContext().SaveChanges();
+                Ильясов_АвтосервисEntities.GetContext().SaveChanges();
                 MessageBox.Show("информация сохранена");
                 Manager.MainFrame.GoBack();
             }
@@ -75,7 +76,7 @@ namespace IlyasovAutoservice
         {
             string s = TBStart.Text;
 
-            if (s.Length < 3 || !s.Contains(':'))
+            if (s.Length < 4 || !s.Contains(':'))
                 TBEnd.Text = "";
             else
             {
@@ -86,8 +87,21 @@ namespace IlyasovAutoservice
                 int sum = startHour + startMin + _currentService.DurationInSeconds;
 
                 int EndHour = sum / 60;
+                if(EndHour > 23)
+                {
+                    EndHour -= 24;
+                }
                 int EndMin = sum % 60;
-                s = EndHour.ToString() + ":" + EndMin.ToString();
+                if (EndMin < 9)
+                {
+                    s = EndHour.ToString() + ":0" + EndMin.ToString();
+                }
+                else
+                {
+                    s = EndHour.ToString() + ":" + EndMin.ToString();
+                }
+                
+               
                 TBEnd.Text = s;
             }
         }

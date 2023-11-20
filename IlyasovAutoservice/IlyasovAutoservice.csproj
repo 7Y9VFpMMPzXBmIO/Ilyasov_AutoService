@@ -77,10 +77,20 @@
     <Compile Include="Gender.cs">
       <DependentUpon>IlyasovModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="IlyasovModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IlyasovModel.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="IlyasovModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IlyasovModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IlyasovModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IlyasovModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Manufacturer.cs">
       <DependentUpon>IlyasovModel.tt</DependentUpon>
@@ -123,16 +133,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IlyasovModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IlyasovModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="IlyasovModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IlyasovModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
